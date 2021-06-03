@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Anton', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0f2ff;
+    perspective: 800px;
+}
+
+.box{
+    width: 32%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 50px -12px #000;
+}
+
+.btf-box{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    display: block;
+    pointer-events: none;
+}
+
+.btf-box img{
+    width: 10rem;
+    position: relative;
+    top: -15px;
+}
+
+.btf-box p{
+    font-size: 0.8rem;
+    color: #12130F;
+    text-transform: uppercase;
+    position: relative;
+    top: -40px;
+    left: 30px;
+}
+
+.card{
+    transform-style: preserve-3d;
+    min-height: 35vh;
+    width: 22rem;
+    border-radius: 25px;
+    padding: 3rem 0rem 0rem 0rem;
+    position: absolute;
+}
+
+.card .card-character{
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-character .card-character-bg{
+    width: 22rem;
+    height: 12rem;
+    background: linear-gradient(
+        to right,
+        rgba(108, 221, 255, 0.75),
+        rgba(108, 221, 255, 0.75)
+        );
+    position: absolute;
+    border-radius: 60%;
+    z-index: 1;
+    top: 77px;
+}
+
+.card-character .card-character-img{
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.card-info .card-info-title{
+    padding-top: 18rem;
+    font-size: 1rem;
+    transition: all 0.75s ease-out;
+}
+
+.card-info .card-info-subtitle{
+    font-size: 0.6rem;
+    padding: 1rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+.card-info .card-info-movies{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+
+.card-info .card-info-movies button{
+    font-size: 0.7rem;
+    padding: 0.2rem 1.6rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    transition: 0.3s all ease;
+}
+
+.card-info .card-info-movies button:hover{
+    background: #f57520;
+    color: white;
+}
+
+.card-info .card-info-movies button.active{
+    background: #f57520;
+    color: white;
+}
+
+.card-button{
+    margin-top: 2rem;
+    transition: all 0.8s ease-out;
+}
+
+.card-button button{
+    margin-left: 85px;
+    width: 50%;
+    padding: 1rem 2rem;
+    background: #41bff1;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.8s all ease;
+}
+
+.card-button button:hover{
+    background: #12130F;
+    color: #ffffff;
+}
+
+/*-----Media Queries-----*/
+
+@media all and (max-width: 375px){
+    body {
+        min-height: 100vh;
+    }
+    .box {
+        width: 340px;
+    }
+    .btf-box p {
+        left: 23px;
+    }
+    .card {
+        width: 17rem;
+    }
+    .card-character .card-character-bg {
+        width: 20rem;
+        top: 70px;
+    }
+    .card-info .card-info-title {
+        padding-top: 17rem;
+    }
+    .card-info .card-info-movies button {
+        padding: 0.2rem 1.8em;
+    }
+    .card-button button {
+        margin-left: 65px;
+    }
+}
+
+@media all and (max-width: 425px){
+    body {
+        min-height: 100vh;
+    }
+    .box {
+        width: 340px;
+    }
+    .btf-box p {
+        left: 23px;
+    }
+    .card {
+        width: 17rem;
+    }
+    .card-character .card-character-bg {
+        width: 20rem;
+        top: 70px;
+    }
+    .card-info .card-info-title {
+        padding-top: 17rem;
+    }
+    .card-info .card-info-movies button {
+        padding: 0.2rem 1.8em;
+    }
+    .card-button button {
+        margin-left: 65px;
+    }
+}
+
+@media all and (max-width: 768px){
+    body {
+        min-height: 100vh;
+    }
+    .box {
+        width: 340px;
+    }
+    .btf-box p {
+        left: 23px;
+    }
+    .card {
+        width: 17rem;
+    }
+    .card-character .card-character-bg {
+        width: 20rem;
+        top: 70px;
+    }
+    .card-info .card-info-title {
+        padding-top: 17rem;
+    }
+    .card-info .card-info-movies button {
+        padding: 0.2rem 1.8em;
+    }
+    .card-button button {
+        margin-left: 65px;
+    }
+}
+
+@media all and (max-width: 1024px){
+    body {
+        min-height: 90vh;
+    }
+    .box {
+        width: 38%
+    }
+    .btf-box p {
+        font-size: 0.8rem;
+        top: -45px;
+        left: 21px;
+    }
+    .card {
+        padding: 3rem 4rem 0rem 0rem;
+    }
+    .card-character .card-character-bg {
+        width: 19rem;
+        height: 9rem;
+        top: 70px;
+    }
+    .card-character .card-character-img {
+        width: 15rem;
+    }
+    .card-info .card-info-title {
+        padding-top: 14rem;
+        font-size: 1.2rem;
+    }
+    .card-info .card-info-movies button {
+        font-size: 0.7rem;
+    }
+    .card-button {
+        margin-top: 1rem;
+    }
+    .card-button button {
+        padding: 1rem 2rem;
+    }
+}
+
+@media all and (max-width: 1440px){
+    .btf-box p {
+        font-size: 1rem;
+        left: 23px;
+    }
+    .card {
+        width: 25rem;
+    }
+    .card-info .card-info-title {
+        font-size: 1.5rem;
+    }
+    .card-info .card-info-subtitle {
+        font-size: 0.8rem;
+    }
+    .card-info .card-info-movies button {
+        font-size: 0.8rem;
+    }
+}
+
+@media all and (min-width: 2560px){
+    .box{
+        height: 1000px;
+    }
+    .btf-box img {
+        width: 20rem;
+    }
+    .btf-box p {
+        font-size: 2.0rem;
+        top: -70px;
+        left: 40px;
+    }
+    .card {
+        width: 47rem;
+    }
+    .card-character .card-character-img {
+        width: 40rem;
+    }
+    .card .card-character {
+        min-height: 70vh;
+    }
+    .card-character .card-character-bg {
+        width: 45rem;
+        height: 25rem;
+        top: 180px;
+    }
+    .card-info .card-info-title {
+        padding-top: 38rem;
+        font-size: 2.5rem;
+    }
+    .card-info .card-info-subtitle {
+        font-size: 1.5rem;
+    }
+    .card-info .card-info-movies button {
+        font-size: 1.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+    .card-button {
+        margin-top: 45px;
+    }
+    .card-button button {
+        font-size: 2rem;
+        margin-left: 185px;
+        width: 50%;
+        padding: 1rem 2rem;
+    }
+}
